@@ -1,0 +1,79 @@
+/*==============
+HEADER
+==============*/
+div#app {
+    max-width: 1180px;
+    margin: 0 auto;
+    background-color: #97CDCD;
+}
+
+div#app nav div a img {
+    width: 60%;
+}
+
+/*==============
+NAV
+==============*/
+nav#nav2 nav.navbar {
+    max-width: 1180px;
+    margin: 0 auto;
+    background-color:  #38393B;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+nav#nav2 nav.navbar ul.navbar-nav li {
+    width: 200px ;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+nav#nav2 nav.navbar ul.navbar-nav li a {
+    color: black;
+    background-color: #10969B;
+    text-align: center;
+    font-size: 16px;
+}
+
+nav#nav2 nav.navbar ul.navbar-nav li a:hover{
+    background-color:  #97CDCD;
+}
+
+nav#nav2 nav.navbar ul.navbar-nav li div.dropdown-menu a{
+    background-color: white;
+    font-size: 16px;
+}
+
+nav#nav2 nav.navbar button.navbar-toggler {
+    background-color: #10969B;
+}
+
+nav#nav2 nav.navbar form {
+    margin-left: 180px;
+}
+
+nav#nav2 nav.navbar form button {
+    border: 0px;
+    color: black;
+    background-color: #10969B;
+    border-radius: 10px 10px 0 10px;
+    height: 40px;
+}
+
+nav#nav2 nav.navbar form button:hover{
+    background-color:  #97CDCD;
+
+@media (max-width: 576px) {
+
+    nav#nav2 nav form.form-inline {
+    max-width: 243px;
+    margin-right: 0 auto;
+    } 
+    
+    
+
+    nav#nav2 nav form input {
+        width: 80%;
+    }
+
+}

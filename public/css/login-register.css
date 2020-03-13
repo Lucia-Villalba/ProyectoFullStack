@@ -1,0 +1,22 @@
+main {
+    margin-top: 50px;
+}
+
+div.container div div div.card {
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    
+}
+
+div.container div {
+    border-radius: 20px 20px 20px 20px ;
+}
+
+div.container div div div.card div.card-header {
+    background-color: #38393B;
+    border-radius: 20px 20px 0px 0px ;
+}
+
+div.container div div div.card div.card-header h4 {
+    color: white;
+}
