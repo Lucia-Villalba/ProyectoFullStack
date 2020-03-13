@@ -15,6 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+######## PRUEBAS VISTA COMUN ###########
+
+Route::get('index', function () {
+    return view('/index');
+});
+
+######## AUTH ###########
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

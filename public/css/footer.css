@@ -1,0 +1,36 @@
+footer { 
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1180px;
+    max-height: 132px;
+    margin-top: 60px;
+    background-color: #38393B;
+    border-radius: 20px 20px 0 0 ;
+    
+}
+
+footer h3 {
+    background-color: #10969B;
+    color:  #38393B;
+    border-radius: 20px 20px 0 0 ;
+    height: 60px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+footer div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div a {
+    margin: 1% 2%;
+	text-decoration: none;
+}
+
+footer div i {
+   color: white;
+   font-size: 40px;
+}
