@@ -76,6 +76,15 @@
       <li class="nav-item">
           <a
             class="nav-link"
+            href="/adminProductos"
+            tabindex="-1"
+            aria-disabled="true"
+            >ADMIN PRODUCTOS
+            </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
             href="/adminMarcas"
             tabindex="-1"
             aria-disabled="true"
@@ -88,16 +97,7 @@
             href="/adminCategorias"
             tabindex="-1"
             aria-disabled="true"
-            >ADMIN CATEGORÍAS</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            href="/adminProductos"
-            tabindex="-1"
-            aria-disabled="true"
-            >ADMIN PRODUCTOS</a>
+            >ADMIN CATEGORIAS</a>
         </li>
       </ul>
 

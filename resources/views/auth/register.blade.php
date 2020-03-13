@@ -6,7 +6,7 @@
 
     @section('title', 'Registro')
 
-    @section('app')
+    @section('header')
     <header>
         @include('layouts.app')
     </header>

@@ -8,7 +8,7 @@
 
     @section('title', 'No Rules - Home')
     
-    @section('app')
+    @section('header')
     <header>
         @include('layouts.app')
     </header>

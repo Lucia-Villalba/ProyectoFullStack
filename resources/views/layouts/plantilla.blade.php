@@ -19,7 +19,7 @@
 
  <body>
      
-    @yield('app')
+    @yield('header')
     @yield('nav')
 
     <main class="">

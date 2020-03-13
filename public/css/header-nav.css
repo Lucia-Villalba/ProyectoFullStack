@@ -62,6 +62,7 @@ nav#nav2 nav.navbar form button {
 
 nav#nav2 nav.navbar form button:hover{
     background-color:  #97CDCD;
+}
 
 @media (max-width: 576px) {
 
@@ -75,5 +76,4 @@ nav#nav2 nav.navbar form button:hover{
     nav#nav2 nav form input {
         width: 80%;
     }
-
 }
