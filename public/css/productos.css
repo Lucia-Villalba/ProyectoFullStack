@@ -1,0 +1,55 @@
+div#container {
+    max-width: 1180px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+div#container section#productos {
+    margin: 0 auto;
+}
+
+div#container section#productos div.row{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+main h1 {
+    text-align: center;
+    margin: 50px 0 30px 0;
+}
+
+div#container section#productos div.row article {
+    max-height: 450px;
+    margin: 20px 0 20px 0;
+}
+
+div#container section#productos div.row article a {
+    text-decoration: none;
+    color: black;
+}
+
+div#container section#productos div.row article a div.card {
+    height: 430px;
+    text-decoration: none;
+}
+
+div#container section#productos div.row article a div.card img {
+    max-height: 290px;
+    margin-top: 10px;
+}
+
+div#container section#productos div.row article a div.card img:hover {
+    margin-top: 6px;
+}
+
+div#container section#productos div.row article a div.card div.card-body {
+    text-align: center;
+    max-height: 135px;
+}
+
+div#container section#productos div.row article a div.card div.card-body p {
+    font-size: 20px;
+}

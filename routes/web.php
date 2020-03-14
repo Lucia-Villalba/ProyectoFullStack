@@ -39,11 +39,23 @@ Route::get('/formModificarProductos/{id}', 'ProductosController@edit');
 Route::post('/modificarProducto/{id}', 'ProductosController@update');
 Route::post('/eliminarProducto', 'ProductosController@destroy');
 
-######## PRUEBAS VISTA COMUN ###########
+######## VISTA COMUN ###########
 
 Route::get('index', function () {
     return view('/index');
 });
+
+Route::get('faq', function () {
+    return view('faq');
+});
+
+Route::get('contacto', function () {
+    return view('/contacto');
+});
+
+Route::get('/productos', 'ProductosController@listadoProductos');
+
+Route::get('/detalleProducto/{id}', 'ProductosController@show');
 
 ######## AUTH ###########
 Auth::routes();

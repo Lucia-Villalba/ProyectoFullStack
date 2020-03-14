@@ -95,7 +95,7 @@ class ProductosController extends Controller
     public function show($id)
     {
         $productoSeleccionado = Producto::find($id);
-        return view ("user/detalleProducto", ['producto'=>$productoSeleccionado]);
+        return view ("detalleProducto", ['producto'=>$productoSeleccionado]);
     }
 
     /**
@@ -201,6 +201,6 @@ class ProductosController extends Controller
     public function listadoProductos(){
         $listadoProductos = Producto::all();
         $vac = compact('listadoProductos');
-        return view('user/productos', $vac);
+        return view('productos', $vac);
     }
 }
