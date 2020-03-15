@@ -46,8 +46,8 @@ div#container section#productos div.row article a div.card img:hover {
 }
 
 div#container section#productos div.row article a div.card div.card-body {
-    text-align: center;
     max-height: 135px;
+    text-align: center;
 }
 
 div#container section#productos div.row article a div.card div.card-body p {

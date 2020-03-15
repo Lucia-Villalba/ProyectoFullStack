@@ -1,0 +1,186 @@
+
+section#contacto {
+    max-width: 1180px;
+    margin: 0 auto;
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    border-radius: 20px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 50px;
+  }
+  
+  section#contacto h3 {
+    height: 60px;
+    color: white;
+    font-weight: 900;
+    background-color: #38393B;
+    border-radius: 20px 20px 0 0 ;
+    padding-left: 30px;
+    padding-top: 10px;
+  }
+  
+  section#contacto div#contenedor {
+      color: black;
+      padding-left: 30px;
+      padding-top: 20px;
+      display: flex; 
+      flex-wrap: wrap;
+  }
+  
+  /*  ARTICLE MAPA  */
+  
+  section#contacto div#contenedor article#mapa {
+      width: 100%;
+      margin-bottom: 40px;
+  }
+  
+  section#contacto div#contenedor article#mapa h4 {
+      margin-bottom: 30px;
+      color: black;
+      font-weight: 900;
+  }
+  
+  section#contacto div#contenedor article#mapa i.fas.fa-map-marker-alt {
+      font-size: 30px;
+  }
+  
+  section#contacto div#contenedor article#mapa iframe {
+      max-width: 97%;
+      margin-top: 10px;
+  }
+  
+  
+  
+  /* ARTICLE DATOS DE CONTACTO  */
+  
+  section#contacto div#contenedor article#datos {
+     width: 45%;
+  }
+
+  section#contacto div#contenedor article#datos h4 {
+    color: black;
+    font-weight: 900;
+ }
+
+ 
+  
+  section#contacto div#contenedor article#datos i.far.fa-envelope,.fas.fa-phone {
+     font-size: 30px; 
+  }
+  
+  section#contacto div#contenedor article#datos i.fab.fa-whatsapp {
+      font-size: 34px;
+  }
+  
+  section#contacto div#contenedor article#datos a,span {
+      color: black;
+      font-family: 'Open Sans', sans-serif;
+      margin-left: 10px;
+  }
+  
+  section#contacto div#contenedor article#datos > * {
+      margin-bottom: 30px;
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+      section#contacto div#contenedor article#datos {
+          width: 100%;
+       }
+      
+  }
+  
+  /*  ARTICLE DEJANOS TU MENSAJE  */
+  
+  
+  section#contacto div#contenedor article#mensaje {
+      width: 55%;
+  }
+
+  section#contacto div#contenedor article#mensaje h4 {
+    color: black;
+    font-weight: 900;
+ }
+  
+  
+  section#contacto div#contenedor article#mensaje label {
+      margin-top: 30px;
+  }
+  
+  section#contacto div#contenedor article#mensaje input,textarea {
+      width: 95%;  
+  }
+  
+  section#contacto div#contenedor article#mensaje button {
+      background-color: #38393B;
+      color: white;
+      border-radius: 10px;
+      border: 0; 
+      padding: 10px 30px 10px 30px;
+      margin: 30px 0 60px 0;
+  }
+  
+  @media (max-width: 768px) {
+      section#contacto div#contenedor article#mensaje {
+          width: 100%;
+      }
+  }
+  
+
+  header nav#nav2 nav.navbar {
+    max-width: 1180px;
+    margin: 0 auto;
+    background-color:  #38393B;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 50px;
+}
+
+header nav#nav2 nav.navbar ul.navbar-nav li {
+    width: 200px ;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+header nav#nav2 nav.navbar ul.navbar-nav li a {
+    color: black;
+    background-color: #10969B;
+    text-align: center;
+    font-size: 18px;
+}
+
+header nav#nav2 nav.navbar ul.navbar-nav li div.dropdown-menu a{
+    background-color: white;
+    font-size: 16px;
+}
+
+header nav#nav2 nav.navbar button.navbar-toggler {
+    background-color: #10969B;
+}
+
+
+header nav#nav2 nav.navbar form button {
+    border: 0px;
+    color: black;
+    background-color: #10969B;
+    border-radius: 10px 10px 0 10px;
+}
+
+
+
+@media (max-width: 576px) {
+
+    header nav#nav2 nav form.form-inline {
+    max-width: 243px;
+    margin-right: 0 auto;
+    } 
+
+    header nav#nav2 nav form input {
+        width: 80%;
+    }
+    header nav#nav2 nav form button {
+    
+    }
+
+}
+
