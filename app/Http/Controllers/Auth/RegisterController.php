@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/index';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -54,7 +54,8 @@ class RegisterController extends Controller
             'fecha' => ['required', 'date'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+            'imgUser' => "image|mimes:jpeg,png,jpg,gif,svg|max:2048"        
+            ]);
     }
 
     /**
@@ -72,6 +73,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'role'=> 'user',
+            'imgUser'=> $data['imgUser'],
         ]);
     }
 }

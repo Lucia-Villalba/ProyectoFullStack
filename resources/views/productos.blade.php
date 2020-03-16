@@ -51,6 +51,7 @@
     </section>
 </div>
 
+{{$listadoProductos->links()}}
 
     @endsection
 

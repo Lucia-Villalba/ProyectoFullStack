@@ -215,7 +215,7 @@ class ProductosController extends Controller
 
 
     public function listadoProductos(){
-        $listadoProductos = Producto::all();
+        $listadoProductos = Producto::orderBy('idProducto','asc')->paginate(4);
         $vac = compact('listadoProductos');
         return view('productos', $vac);
     }
