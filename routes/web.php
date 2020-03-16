@@ -39,11 +39,48 @@ Route::get('/formModificarProductos/{id}', 'ProductosController@edit');
 Route::post('/modificarProducto/{id}', 'ProductosController@update');
 Route::post('/eliminarProducto', 'ProductosController@destroy');
 
+########## CARRITO ##########
+Route::get('carrito', function () {
+    return view('/carrito');
+});
+
+
+Route::get('carrito/ver',[
+    'as' => 'carrito-ver',
+    'uses' => 'CarritoController@show'
+    ]);
+
+Route::get('carrito/agregar/{id}',[
+    'as' => 'carrito-agregar',
+    'uses' => 'CarritoController@add'
+    ]);
+
+Route::get('carrito/quitar/{id}',[
+    'as' => 'carrito-quitar',
+    'uses' => 'CarritoController@delete'
+    ]);
+
+Route::get('carrito/vaciar',[
+    'as' => 'carrito-vaciar',
+    'uses' => 'CarritoController@trash'
+    ]);
+
+Route::get('detalles-del-pedido', [
+    'middleware' => 'auth',
+    'as' => 'detalles-del-pedido',
+    'uses' => 'CarritoController@orderDetail'
+]);
+
+Route::get('carrito/comprar',[
+    'as' => 'carrito-comprar',
+    'uses' => 'CarritoController@buy'
+    ]);
+
 ######## VISTA COMUN ###########
 
 Route::get('/', function () {
     return view('/index');
-});
+})->name('index');
 
 Route::get('faq', function () {
     return view('faq');
@@ -53,7 +90,7 @@ Route::get('contacto', function () {
     return view('/contacto');
 });
 
-Route::get('/productos', 'ProductosController@listadoProductos');
+Route::get('/productos', 'ProductosController@listadoProductos')->name('productos');
 
 Route::get('/detalleProducto/{id}', 'ProductosController@show');
 

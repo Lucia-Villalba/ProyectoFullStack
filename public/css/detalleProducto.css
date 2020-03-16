@@ -1,0 +1,80 @@
+*{
+    
+    font-family: 'Open Sans', sans-serif;
+ }
+ 
+ main{
+     margin: 0 auto;
+     background-image: url(../img/fondo.jpg);
+     background-size: cover;
+     max-width: 1180px;
+     max-height: 600px;
+     margin-top: 50px;
+ }
+ main section{
+     height: 100%;
+     display: flex;
+     flex-direction: row;
+ }
+ main section #L-side div img{
+     width: 100%;
+     height: 100%;
+ }
+ main section #L-side div{
+     padding: 5% 0 5% 5%;
+     max-width: 520px;
+     height:100%;
+ }
+ main section #L-side{
+     width: 50%;
+     height: 100%;
+ }
+ main section #R-side{
+     width: 50%;
+     height: 100%;
+     padding: 2%;
+     display: flex;
+     flex-direction: column;
+ }
+ main section #R-side p{
+     margin-top: 2%;
+ }
+ main section #R-side form{
+     display: flex;
+     flex-direction: column;
+ }
+ main section #R-side form label{
+     font-size: 25px;
+ }
+ main section #R-side form .cant{
+     margin:5% 0 0 0;
+ }
+ main section #R-side form .cant input[type='number']{
+     width: 20%;
+     text-align: center;
+ }
+ main section #R-side form .radio input[type='radio']{
+     width: 20px;
+     height: 20px;
+ }
+ main section #R-side form .radio label,
+  main section #R-side form .radio input[type='radio']{
+      margin: 2px;
+ }
+ main section #R-side form .submit{
+     margin:6% 0 0 0;
+     display: flex;
+     justify-content: space-between;
+ }
+ main section #R-side form .submit input[type='submit']{
+     width: 40%;
+     max-height: 40px;
+     border: none;
+     color:white;
+     background-color: #38393B;
+     text-transform: uppercase;
+     font-family: 'Open Sans',sans-serif;
+     padding: 1%;
+     border-radius: 10px;
+ }
+ 

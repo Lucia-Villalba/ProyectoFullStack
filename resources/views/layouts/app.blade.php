@@ -22,6 +22,11 @@
 
 </head>
 <body>
+
+    @if(\Session::has('message'))
+        @include('msjCompraHecha')
+    @endif
+
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
@@ -53,7 +58,7 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="">
+                                <a class="nav-link" href="/carrito/ver">
                                 <i class="fas fa-shopping-cart"></i>
                                 </a>
                             </li>
