@@ -41,7 +41,7 @@ Route::post('/eliminarProducto', 'ProductosController@destroy');
 
 ######## VISTA COMUN ###########
 
-Route::get('index', function () {
+Route::get('/', function () {
     return view('/index');
 });
 
@@ -56,6 +56,12 @@ Route::get('contacto', function () {
 Route::get('/productos', 'ProductosController@listadoProductos');
 
 Route::get('/detalleProducto/{id}', 'ProductosController@show');
+
+Route::get('productos/{filtro}','ProductosController@filtros');
+
+Route::get('perfil', function (){
+    return view('perfilUsuario');
+});
 
 ######## AUTH ###########
 Auth::routes();

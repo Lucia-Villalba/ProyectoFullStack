@@ -33,7 +33,7 @@
             <div class="diff">
                 <article class="outfit">
                     <div class="OHead">
-                        <a href="/prueba"> 
+                        <a href="/productos/Calzado Masculino"> 
                             <h2>Calzado Masculino</h2>
                         </div>
                             <div class="ODiv"><img src="{{ asset('img/calzado-hombre.jpg')}}" alt="Calzado Masculino" class="OImg">
@@ -42,7 +42,7 @@
                 </article>
                 <article class="outfit">
                     <div class="OHead">
-                    <a href="/prueba"> 
+                    <a href="/productos/Calzado Femenino"> 
                         <h2>Calzado Femenino</h2></div>
                         <div class="ODiv"><img src="img/calzado-mujer.jpg" alt="Calzado Femenino" class="OImg">
                     </a>
@@ -52,7 +52,7 @@
             <div class="diff">
                 <article class="outfit">
                     <div class="OHead">
-                    <a href="/prueba"> 
+                    <a href="/productos/Indumentaria Masculina"> 
                         <h2>Indumentaria Masculina</h2></div>
                         <div class="ODiv"><img src="img/ropa-hombre.jpg" alt="Indumentaria Masculina" class="OImg">
                     </a>
@@ -60,7 +60,7 @@
                 </article>
                 <article class="outfit">
                     <div class="OHead">
-                    <a href="/prueba"> 
+                    <a href="/productos/Indumentaria Femenina"> 
                         <h2>Indumentaria Femenina</h2></div>
                         <div class="ODiv"><img src="img/ropa-mujer.jpg" alt="Indumentaria Femenina" class="OImg">
                     </a>

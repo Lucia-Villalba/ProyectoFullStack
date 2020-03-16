@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Storage;
 
 class ProductosController extends Controller
 {
+    public function __construct(){
+        $this->middleware('admin',['only'=>['create','store','edit','destroy']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -195,7 +198,20 @@ class ProductosController extends Controller
     }
 
     
-
+    public function filtros($filtro){
+        if($filtro == "Calzado Masculino"){
+            $cat = 1;
+        }elseif($filtro == "Calzado Femenino"){
+            $cat = 2;
+        }elseif($filtro == "Indumentaria Masculina"){
+            $cat = 3;
+        }elseif($filtro == "Indumentaria Femenina"){
+            $cat = 4;
+        }
+        $listadoProductos = Producto::where('CATEGORIAS_idCategoria','=',$cat)->get();
+        $vac = compact('listadoProductos');
+        return view('productos', $vac);
+    }
 
 
     public function listadoProductos(){

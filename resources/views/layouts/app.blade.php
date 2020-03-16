@@ -25,7 +25,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="/index">
+                <a class="navbar-brand" href="/">
                  <img src="{{ asset('img/logo.png')}}" alt="No Rules"/>
                  
                 </a>
@@ -59,7 +59,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#" >
+                            <a class="nav-link" href="/perfil" >
                                     Hola {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                             </li>
