@@ -8,57 +8,9 @@ use App\User;
 
 class UsersController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        
+    public function __construct(){
+        $this->middleware('auth');
     }
 
     /**
@@ -68,19 +20,31 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $idU)
     {
-        
-    }
+        $reglas = [
+            'name' => ['required', 'string', 'max:255'],
+            'surname' => ['required', 'string', 'max:255'],
+            'fecha' => ['required', 'date'],   
+        ];
+        $mensajes = [
+            "string" => "El campo debe ser un texto",
+            "max" => "El campo debe tener un máximo de :max",
+            "min" => "El campo debe tener un mínimo de :min",
+            "required" => "El campo debe ser completado",
+            "date " => "El campo debe ser una fecha correcta",
+            "filled" => "El campo no debe estar vacio"
+        ];
+        $this->validate($request, $reglas, $mensajes);
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $User = User::find($idU);
+
+        $User->name = $request['name'];
+        $User->surname = $request['surname'];
+        $User->fecha = $request['fecha'];
+        $User->save();
+
+
+        return redirect("perfil");
     }
 }

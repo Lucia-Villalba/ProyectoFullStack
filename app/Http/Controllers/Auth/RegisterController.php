@@ -53,8 +53,7 @@ class RegisterController extends Controller
             'surname' => ['required', 'string', 'max:255'],
             'fecha' => ['required', 'date'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'imgUser' => "image|mimes:jpeg,png,jpg,gif,svg|max:2048"        
+            'password' => ['required', 'string', 'min:8', 'confirmed'],        
             ]);
     }
 
@@ -73,7 +72,6 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'role'=> 'user',
-            'imgUser'=> $data['imgUser'],
         ]);
     }
 }

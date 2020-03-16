@@ -24,23 +24,75 @@
 
 @section('main')
     <div class="card">
-        
-        <h5 class="card-header">Bienvenid@ {{auth()->user()->name}} {{auth()->user()->surname}}
-        
-        </h5>
-
-        
-
-            <div class="card-body">
-                <img src="{{auth()->user()->imgUser}}" class="float-right rounded-circle" alt="">
-         
-                <p class="card-text">Email: {{auth()->user()->email}}</p>
-
-                <p class="card-text">Fecha de nacimiento: {{auth()->user()->fecha}}</p>
-
-                <a href="/formModificarUsuario">
-                <button type="button" class="btn btn-info float-left">Modificar datos</button>
-                </a>
+                    <div class="card-header d-flex justify-content-between">
+                        <h4>{{ __('Datos Personales') }}</h4>
+                        <h4>{{__('Rol:')}} {{auth()->user()->role}}</h4>
+                    </div>
+    
+                    <div class="card-body">
+                    <form method="POST" action="/modificarUser/{{auth()->user()->id}}">
+                            {{ csrf_field() }}
+    
+                            <div class="form-group row">
+                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
+    
+                                <div class="col-md-6">
+                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ auth()->user()->name }}" required autocomplete="name" autofocus>
+    
+                                    @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+    
+                            <div class="form-group row">
+                                <label for="surname" class="col-md-4 col-form-label text-md-right">{{ __('Apellido') }}</label>
+    
+                                <div class="col-md-6">
+                                    <input id="surname" type="text" class="form-control @error('surname') is-invalid @enderror" name="surname" value="{{ auth()->user()->surname }}" required autocomplete="surname" autofocus>
+    
+                                    @error('surname')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+    
+    
+                            <div class="form-group row">
+                                <label for="fecha" class="col-md-4 col-form-label text-md-right">{{ __('Fecha de Nacimiento') }}</label>
+    
+                                <div class="col-md-6">
+                                    <input id="fecha" type="date" class="form-control @error('fecha') is-invalid @enderror" name="fecha" value="{{ auth()->user()->fecha }}" required autocomplete="fecha" autofocus>
+    
+                                    @error('fecha')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+    
+                            <div class="form-group row">
+                                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Email') }}</label>
+    
+                                <div class="col-md-6">
+                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ auth()->user()->email }}" required autocomplete="email" readonly>
+                                </div>
+                            </div>
+    
+                            <div class="form-group row mb-0">
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="submit" class="btn btn-dark">
+                                        {{ __('Modificar') }}
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
 
                 <form method="POST" action={{route('logout')}}>
                     {{ csrf_field() }}

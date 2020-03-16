@@ -96,9 +96,12 @@ Route::get('/detalleProducto/{id}', 'ProductosController@show');
 
 Route::get('productos/{filtro}','ProductosController@filtros');
 
+######## PERFIL USER ###########
 Route::get('perfil', function (){
     return view('perfilUsuario');
 });
+
+Route::post('/modificarUser/{id}','UsersController@update');
 
 ######## AUTH ###########
 Auth::routes();

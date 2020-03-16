@@ -24,8 +24,8 @@
                 </div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
-                        @csrf
+                    <form method="POST" action="{{ route('register') }}">
+                        {{ csrf_field() }}
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
@@ -103,19 +103,6 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                             <label for="fecha" class="col-md-4 col-form-label text-md-right">{{ __('Imagen de Perfil') }}</label>
-
-                             <div class="col-md-6">
-                                <input type="file" name="imgUser" class="form-control">
-                                @error('imgUser')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                @enderror
                             </div>
                         </div>
 
