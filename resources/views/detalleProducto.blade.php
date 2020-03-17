@@ -28,40 +28,44 @@
             </div>
         @endif
 
-    <section>
-        <article id="L-side">
-            <div><img src="{{asset('img/productos/'.$producto->imgProducto)}}" alt="Imagen del producto seleccionado"></div>
-        </article>
-        <article id="R-side">
-            <h3>{{ $producto -> nbProducto }}</h3>
-            <h4>$ {{ $producto -> precioProducto }}</h4>
-            <p>
-                {{ $producto -> dtlProducto }}
-            </p>
-            <form action="">
-                <h3>Talle:</h3>
-                <div class="radio">
-                    <label for="38">38</label>
-                    <input type="radio" name="38" id="radio">
+    <div class="container text-center">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bloque-producto">
+                    <img src="{{asset('img/productos/'.$producto->imgProducto)}}" alt="Img del producto seleccionado">
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="bloque-producto">
+                    <h3>{{ $producto -> nbProducto }}</h3><hr>               
+                    <div class="info-producto panel">
+                        <p>{{ $producto -> dtlProducto }}</p>
+                        <h3><span class="label label-success">Precio: ${{ $producto -> precioProducto }}</span></h3>
+
+                        <form action="">
+                            <div class="cant">
+                                <label for="numero">Cantidad:</label>
+                                <input type="number" name="numero" id="num" min=1>
+                            </div>
+                        </form>
+
+                        <p>
+                            <a href="{{route('carrito-agregar', $producto -> idProducto)}}" class="btn btn-warning btn-block"><i class="fas fa-cart-plus"></i> Agregar a mi carrito</a>
+                        </p>
+
                     </div>
-                <div class="cant">
-                    <label for="numero">Cantidad:</label>
-                    <input type="number" name="numero" id="num" min=1>
                 </div>
-                <div class="submit">
-                
-                <a href="{{route('carrito-agregar', $producto -> idProducto)}}" class="btn btn-outline-info">
-                <i class="far fa-edit fa-lg mr-2"></i>
-                Agregar al carrito
-                </a>
+            </div>
+        </div>
 
-<!--<input type="submit" value="Agregar al carrito" href="{{route('carrito-agregar', $producto -> idProducto)}}">-->
+        <article id="R-side">
 
-                    <input type="submit" value="Comprar">
-                </div>
-            </form>
+
         </article>
-    </section>
+    </div>
 
     @endsection
 

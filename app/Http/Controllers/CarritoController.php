@@ -65,7 +65,8 @@ class CarritoController extends Controller
     }
 
     public function buy(){
+        \Session::forget('carrito');
         return \Redirect::route('index')
-            ->with('message', 'La compra ha sido realizada');
+            ->with('message', ' La compra ha sido realizada !!');
     }
 }

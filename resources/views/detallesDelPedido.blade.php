@@ -2,7 +2,6 @@
 
     @section('linkStyle')
     <link rel="stylesheet" href="{{asset('css/header-nav.css')}} ">
-    <link rel="stylesheet" href="{{asset('css/detalleProducto.css')}}">
     <link rel="stylesheet" href="/css/footer.css">
     @endsection
 
@@ -70,7 +69,7 @@
                         </a>
 
                         <a href="{{ route('carrito-comprar')}}" class="btn btn-warning">
-                            Pagar con <i class="fa fa-paypal"></i>
+                            Pasar por caja <i class="fas fa-cash-register"></i>
                         </a>
                     </p>
             </div>

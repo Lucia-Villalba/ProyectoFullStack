@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/css/footer.css">
     @endsection
 
-    @section('title', 'Shopping Cart')
+    @section('title', 'Tu carrito')
 
     @section('header')
     <header>
@@ -28,7 +28,11 @@
             </div>
         @endif
 
-      <h4>Shopping Cart</h4>
+
+    <div class="container text-center">
+      <div>
+        <h1><i class="fa fa-shopping-cart"></i> Tu carrito</h1>
+      </div>
 
       <div class="table-cart">
         @if(count($carrito))
@@ -59,13 +63,13 @@
                   <tr>
                     <td><img src="{{asset('img/productos/'.$item->imgProducto)}}"></td>
                     <td>{{ $item -> nbProducto }}</td>
-                    <td class="precioP">${{ number_format($item -> precioProducto,2) }}</td>
+                    <td class="precioP">${{ $item -> precioProducto }}</td>
                     <td>
                       <input 
                           type="number" min="1" max="10" 
-                          value="{{ $item -> cantidad }}" id="producto_{{ $item -> id }}" class="cantidadP">
+                          value="{{ $item -> cantidad }}" class="cantidadP">
                     </td>
-                    <td class="precioTotal">${{ number_format($item -> precioProducto * $item -> cantidad,2) }}</td>
+                    <td class="precioTotal">${{ $item -> precioProducto * $item -> cantidad }}</td>
                     <td>
                       <a href="{{ route('carrito-quitar', $item -> idProducto)}}" class="btn btn-danger">
                         <i class="fa fa-remove"></i>
@@ -91,46 +95,18 @@
         <hr>
         <p>
           <a href="/productos" class="btn btn-primary">
-            <i class="fa fa-chevron-circle-left"></i>Seguir comprando
+            <i class="fa fa-chevron-circle-left"></i> Seguir comprando
           </a>
 
           <a href="{{ route('detalles-del-pedido') }}" class="btn btn-primary">
-            Continuar<i class="fa fa-chevron-circle-right"></i>
+            Continuar <i class="fa fa-chevron-circle-right"></i>
           </a>
         </p>
       </div>
 
+    </div>
 
-<!--     <script src="/js/main.js"></script>  
-  <section>
-        
-        <article class="items">
-          <div class="img">
-            <img src="img/producto1.jpg" alt="Zapatilla Nike" />
-          </div>
-          <div class="txt">
-            <h2>Zapatillas Nike</h2>
-            <h2>Talle:</h2>
-            <h3>$****</h3>
-            <div class="cant">
-              <label for="numero">Cantidad:</label>
-              <input type="number" name="numero" id="num" min="1" />
-            </div>
-            <h2>Subtotal:</h2>
-            <h3>$****</h3>
-          </div>
-        </article>
-        
-        <article id="pago">
-          <div>
-            <button>Seguir Comprando</button>
-            <button>Vaciar Carrito</button>
-          </div>
-          <h2>Total:</h2>
-          <h3>$****</h3>
-          <button>Pagar</button>
-        </article>
-      </section> -->
+      <script src="/js/subtotalCarrito.js"></script>
 
     @endsection
 
