@@ -76,6 +76,11 @@ Route::get('carrito/comprar',[
     'uses' => 'CarritoController@buy'
     ]);
 
+Route::get('carrito/actualizar/{id}/{cantidad?}',[
+    'as' => 'carrito-actualizar',
+    'uses' => 'CarritoController@update'
+    ]);
+
 ######## VISTA COMUN ###########
 
 Route::get('/', function () {

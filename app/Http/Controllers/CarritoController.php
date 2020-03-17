@@ -64,6 +64,16 @@ class CarritoController extends Controller
         return view('/detallesDelPedido', compact('carrito','total'));
     }
 
+    public function update($id, $cantidad){
+        $producto = Producto::find($id);
+        $carrito = \Session::get('carrito');
+        $carrito[$producto->idProducto]->cantidad = $cantidad;
+
+        \Session::put('carrito', $carrito);
+
+        return redirect()->route('carrito-ver');        
+    }
+
     public function buy(){
         \Session::forget('carrito');
         return \Redirect::route('index')

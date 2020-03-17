@@ -67,7 +67,13 @@
                     <td>
                       <input 
                           type="number" min="1" max="10" 
-                          value="{{ $item -> cantidad }}" class="cantidadP">
+                          value="{{ $item -> cantidad }}" class="cantidadP" id="product_{{ $item -> idProducto }}">
+
+                          <a 
+                              href="#" class="btn btn-warning btn-update-item"
+                              data-href="{{ route('carrito-actualizar', $item -> idProducto) }}"
+                              data-id="{{ $item -> idProducto }}"><i class="fa fa-refresh"></i>
+                          </a>
                     </td>
                     <td class="precioTotal">${{ $item -> precioProducto * $item -> cantidad }}</td>
                     <td>
@@ -105,7 +111,7 @@
       </div>
 
     </div>
-
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
       <script src="/js/subtotalCarrito.js"></script>
 
     @endsection

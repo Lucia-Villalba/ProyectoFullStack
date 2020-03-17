@@ -45,13 +45,6 @@
                         <p>{{ $producto -> dtlProducto }}</p>
                         <h3><span class="label label-success">Precio: ${{ $producto -> precioProducto }}</span></h3>
 
-                        <form action="">
-                            <div class="cant">
-                                <label for="numero">Cantidad:</label>
-                                <input type="number" name="numero" id="num" min=1>
-                            </div>
-                        </form>
-
                         <p>
                             <a href="{{route('carrito-agregar', $producto -> idProducto)}}" class="btn btn-warning btn-block"><i class="fas fa-cart-plus"></i> Agregar a mi carrito</a>
                         </p>

@@ -1,15 +1,9 @@
-window.onload = function () {
-
-    var precioP = document.querySelector(".precioP");
-    var cantidadP = document.querySelector(".cantidadP");
-    var precioTotal = document.querySelector(".precioTotal");
-
-    var contenido = (precioP.innerHTML).slice(1,precioP.innerHTML.length);
-    
-    cantidadP.addEventListener("change", function(){
-        
-        var resultado = cantidadP.value * contenido;
-        precioTotal.innerHTML = "$ " + resultado;
-        
+$(document).ready(function(){
+    $(".btn-update-item").on('click', function(e){
+        e.preventDefault();
+        var id = $(this).data('id');
+        var href = $(this).data('href');
+        var cantidad = $("#product_"+id).val();
+        window.location.href = href + "/" + cantidad;
     })
-}
+})
