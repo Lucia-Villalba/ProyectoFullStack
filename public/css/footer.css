@@ -34,3 +34,7 @@ footer div i {
    color: white;
    font-size: 40px;
 }
+
+footer div i:hover {
+color: #97CDCD;
+}

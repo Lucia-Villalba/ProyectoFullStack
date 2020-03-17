@@ -38,7 +38,7 @@
                         </div>
                             <div class="ODiv"><img src="{{ asset('img/calzado-hombre.jpg')}}" alt="Calzado Masculino" class="OImg">
                         </a>
-                </div>
+                    </div>
                 </article>
                 <article class="outfit">
                     <div class="OHead">
