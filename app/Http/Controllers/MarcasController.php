@@ -46,10 +46,10 @@ class MarcasController extends Controller
             "nbMarca" => "string|min:2|max:45|required"
         ];
         $mensajes = [
-            "string" => "El campo :attribute debe ser un texto",
-            "min" => "El campo :attribute debe tener un mínimo de :min",
-            "max" => "El campo :attribute debe tener un máximo de :max",
-            "required" => "El campo :attribute debe ser completado"
+            "nbMarca.string" => "El campo Marca debe ser un texto",
+            "nbMarca.min" => "El campo Marca tener como mínimo 2 caracteres",
+            "nbMarca.max" => "El campo Marca solo puede tener hasta 45 caracteres",
+            "nbMarca.required" => "El campo Marca debe ser completado",
         ];
         $this->validate($request, $reglas, $mensajes);
 

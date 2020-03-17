@@ -38,7 +38,7 @@
             <br>
             <input type="text" name="nbMarca" class="form-control" value="{{ old('nbMarca') }}" id="nbMarca" placeholder="Nombre de la Marca">
             @error('nbMarca')
-                <div class="alert alert-danger">{{ $message }}</div>
+                <div class="alert alert-danger mt-1">{{ $message }}</div>
             @enderror
 
             <br>

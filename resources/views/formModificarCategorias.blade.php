@@ -38,7 +38,7 @@
                 <label for="nbCategoria">Nombre de la categoría:</label>
                 <input type="text" class="form-control" name="nbCategoria"  value="{{ $categoria -> nbCategoria}}" id="nbCategoria">
                 @error('nbCategoria')
-                <div class="alert alert-danger">{{ $message }}</div>
+                <div class="alert alert-danger mt-1">{{ $message }}</div>
                 @enderror
             </div>
             <button type="submit" class="btn btn-dark px-4" onclick="return confirm('¿Confirmar cambio?')">

@@ -27,12 +27,12 @@
         <table class="table table-bordered table-stripped table-hover">
             <thead class="">
                 <tr>
-                    <th>Nombre</th>
-                    <th>Precio</th>
-                    <th>Marca</th>
-                    <th>Categoría</th>
-                    <th>Detalle</th>               
-                    <th>Imagen</th>
+                    <th class="columna">Nombre</th>
+                    <th class="columna">Precio</th>
+                    <th class="columna">Marca</th>
+                    <th class="columna">Categoría</th>
+                    <th class="columna">Detalle</th>               
+                    <th class="columna">Imagen</th>
                     <th colspan="2" class="text-center">
                         <a href="/formAgregarProductos" class="btn btn-dark px-4">
                             <i class="far fa-plus-square fa-lg mr-2"></i>

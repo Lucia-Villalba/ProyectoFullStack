@@ -27,7 +27,7 @@
         <table class="table table-bordered table-hover table-striped">
             <thead class="">
             <tr>
-                <th>Marca</th>
+                <th class="columna">Marca</th>
                 <th colspan="2">
                     <a href="/formAgregarMarcas" class="btn btn-dark">
                     <i class="far fa-plus-square fa-lg mr-2"></i>

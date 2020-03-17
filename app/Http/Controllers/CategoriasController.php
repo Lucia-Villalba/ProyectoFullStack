@@ -47,10 +47,10 @@ class CategoriasController extends Controller
             "nbCategoria" => "string|min:3|max:45|required"
         ];
         $mensajes = [
-            "string" => "El campo :attribute debe ser un texto",
-            "min" => "El campo :attribute debe tener un mínimo de :min caracteres",
-            "max" => "El campo :attribute debe tener un máximo de :max caracteres",
-            "required" => "El campo :attribute debe ser completado"
+            "nbCategoria.string" => "El campo Categoría debe ser un texto",
+            "nbCategoria.min" => "El campo Categoría tener como mínimo 3 caracteres",
+            "nbCategoria.max" => "El campo Categoría solo puede tener hasta 45 caracteres",
+            "nbCategoria.required" => "El campo Categoría debe ser completado"
         ];
         $this->validate($request, $reglas, $mensajes);
 

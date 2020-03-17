@@ -35,6 +35,19 @@ footer div i {
    font-size: 40px;
 }
 
-footer div i:hover {
-color: #97CDCD;
+footer div i.fa-facebook:hover {
+color: #4267b2;
 }
+
+footer div i.fa-twitter-square:hover {
+    color: #00b5f1;
+}
+
+footer div i.fa-instagram:hover {
+    color: #c12b72;
+}
+
+footer div i.fa-linkedin:hover {
+    color: #0073b1;
+}
+

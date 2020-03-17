@@ -28,7 +28,7 @@
 
             <thead class="">
                 <tr>
-                    <th>Categoría</th>
+                    <th class="columna">Categoría</th>
                     <th colspan="2">
                         <a href="/formAgregarCategorias" class="btn btn-dark">
                         <i class="far fa-plus-square fa-lg mr-2"></i>

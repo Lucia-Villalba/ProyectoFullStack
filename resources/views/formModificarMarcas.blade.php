@@ -37,7 +37,7 @@
             <br>
             <input type="text" name="nbMarca" class="form-control" value="{{ $marca -> nbMarca}}" id="nbMarca">
             @error('nbMarca')
-                <div class="alert alert-danger">{{ $message }}</div>
+                <div class="alert alert-danger mt-1">{{ $message }}</div>
             @enderror
 
             <br>

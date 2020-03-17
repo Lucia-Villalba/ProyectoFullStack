@@ -12,5 +12,9 @@ h1 {
 
 main table thead tr {
     background-color:#97CDCD;
+}
 
+main table thead tr th.columna {
+    font-size: 18px;
+    text-align: center;
 }

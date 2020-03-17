@@ -58,12 +58,20 @@ class ProductosController extends Controller
             "imgProducto" => "image|mimes:jpeg,png,jpg,gif,svg|max:2048"
         ];
         $mensajes = [
-            "string" => "El campo :attribute debe ser un texto",
-            "max" => "El campo :attribute debe tener un máximo de :max",
-            "min" => "El campo :attribute debe tener un mínimo de :min",
-            "required" => "El campo :attribute debe ser completado",
-            "integer " => "El campo :attribute debe ser un número entero",
-            "imgProducto" => "image|mimes:jpeg,png,jpg,gif,svg|max:2048"
+            "nbProducto.string" => "El campo Nombre debe ser un texto",
+            "nbProducto.min" => "El campo Nombre tener como mínimo 3 caracteres",
+            "nbProducto.max" => "El campo Nombre solo puede tener hasta 90 caracteres",
+            "nbProducto.required" => "El campo Nombre debe ser completado",
+            "precioProducto.integer" => "El campo Precio debe ser un número",
+            "precioProducto.required" => "El campo Precio debe ser completado",
+            "dtlProducto.string" => "El campo Detalle debe ser un texto",
+            "dtlProducto.min" => "El campo Detalle tener como mínimo 4 caracteres",
+            "dtlProducto.max" => "El campo Detalle solo puede tener hasta 135 caracteres",
+            "CATEGORIAS_idCategoria.required" => "Debe seleccionar una Categoría",
+            "MARCAS_idMarca.required" => "Debe seleccionar una Marca",
+            "imgProducto.image" => "Solo puede subir un archivo de imagen con extensión jpeg, png, jpg, gif o svg",
+            "imgProducto.mimes" => "Solo puede subir un archivo de imagen con extensión jpeg, png, jpg, gif o svg",
+            "imgProducto.max" => "La imagen cargada puede tener hasta 2048px"
         ];
         $this->validate($request, $reglas, $mensajes);
 
@@ -138,12 +146,20 @@ class ProductosController extends Controller
             "imgProducto" => "image|mimes:jpeg,png,jpg,gif,svg|max:2048"
         ];
         $mensajes = [
-            "string" => "El campo debe ser un texto",
-            "max" => "El campo debe tener un máximo de :max",
-            "min" => "El campo debe tener un mínimo de :min",
-            "required" => "El campo debe ser completado",
-            "integer " => "El campo debe ser un número entero",
-            "filled" => "El campo no debe estar vacio"
+            "nbProducto.string" => "El campo Nombre debe ser un texto",
+            "nbProducto.min" => "El campo Nombre tener como mínimo 3 caracteres",
+            "nbProducto.max" => "El campo Nombre solo puede tener hasta 90 caracteres",
+            "nbProducto.required" => "El campo Nombre debe ser completado",
+            "precioProducto.integer" => "El campo Precio debe ser un número",
+            "precioProducto.required" => "El campo Precio debe ser completado",
+            "dtlProducto.string" => "El campo Detalle debe ser un texto",
+            "dtlProducto.min" => "El campo Detalle tener como mínimo 4 caracteres",
+            "dtlProducto.max" => "El campo Detalle solo puede tener hasta 135 caracteres",
+            "CATEGORIAS_idCategoria.required" => "Debe seleccionar una Categoría",
+            "MARCAS_idMarca.required" => "Debe seleccionar una Marca",
+            "imgProducto.image" => "Solo puede subir un archivo de imagen con extensión jpeg, png, jpg, gif o svg",
+            "imgProducto.mimes" => "Solo puede subir un archivo de imagen con extensión jpeg, png, jpg, gif o svg",
+            "imgProducto.max" => "La imagen cargada puede tener hasta 2048px"
         ];
         $this->validate($request, $reglas, $mensajes);
 

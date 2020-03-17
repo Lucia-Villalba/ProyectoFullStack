@@ -1,3 +1,8 @@
+div.text-center {
+    margin-top: 50px;
+    min-height: calc(100vh - 100px);
+}
+
 .table-cart{
     background-image: url(../img/fondo.jpg);
     border-radius: 1em;

@@ -39,8 +39,8 @@
                     <div class='input-group mb-2'>
                             <input type="text" class="form-control" name="nbProducto" value="{{ $producto -> nbProducto}}" id="nbProducto">
                     </div>
-                       @error('nbProducto')
-                    <small class="alert alert-danger">{{ $message }}</small>
+                    @error('nbProducto')
+                    <div class="alert alert-danger mt-1">{{ $message }}</div>
                     @enderror
                 </div>
                  
@@ -54,7 +54,7 @@
                         
                     </div>
                     @error('precioProducto')
-                        <small class="alert alert-danger">{{ $message }}</small>
+                        <div class="alert alert-danger mt-1">{{ $message }}</div>
                         @enderror
                 </div>
 
@@ -71,7 +71,7 @@
                 {{--  a partir de aca, hace lo que quieras  --}}
                 </select>
                 @error('MARCAS_idMarca')
-                    <div class="alert alert-danger">{{ $message }}</div>
+                    <div class="alert alert-danger mt-1">{{ $message }}</div>
                 @enderror
                 </div>
 
@@ -86,7 +86,7 @@
                 @endforeach
                 </select>
                 @error('CATEGORIAS_idCategoria')
-                    <div class="alert alert-danger">{{ $message }}</div>
+                    <div class="alert alert-danger mt-1">{{ $message }}</div>
                 @enderror
                 </div>
 
@@ -94,7 +94,7 @@
                 <label for="dtlproducto">Detalle:</label>
                 <textarea name="dtlProducto" class="form-control" id="dtlProducto">{{ $producto -> dtlProducto }}</textarea>
                 @error('dtlProducto')
-                    <div class="alert alert-danger">{{ $message }}</div>
+                    <div class="alert alert-danger mt-1">{{ $message }}</div>
                 @enderror
                 </div>
 
@@ -104,7 +104,7 @@
                 <img src="{{asset('img/productos/'.$producto->imgProducto)}}" class='img-thumbnail' alt="" width="200">
                 <input type="file" name="imgProducto" class="form-control">
                                 @error('imgProducto')
-                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    <div class="alert alert-danger mt-1">{{ $message }}</div>
                                 @enderror
                                 <br>
                 </div>

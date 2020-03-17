@@ -23,7 +23,7 @@
     @section('main')
 
         @if(session()->has('flash'))
-            <div class="alert alert-info">{{ session('flash') }}</div>
+            <div class="alert alert-success">{{ session('flash') }}</div>
         @endif
     
         <div id="banner">

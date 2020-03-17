@@ -38,7 +38,7 @@
                     <label for="nbProducto">Nombre del Producto:</label>
                     <input type="text" class="form-control" name="nbProducto"  value="{{old('nbProducto')}}" id="nbProducto" placeholder="Nombre del Producto">
                     @error('nbProducto')
-                    <div class="alert alert-danger">{{ $message }}</div>
+                    <div class="alert alert-danger mt-1">{{ $message }}</div>
                     @enderror
                 </div>
 
@@ -49,10 +49,10 @@
                             <div class="input-group-text">$</div>
                         </div>
                         <input type="number" name="precioProducto" value="{{ old('precioProducto') }}" class="form-control" id="precioProducto" placeholder="0" min="0" step="0">
-                        @error('precioProducto')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
                     </div>
+                     @error('precioProducto')
+                        <div class="alert alert-danger mt-1">{{ $message }}</div>
+                        @enderror
                 </div>
 
                 <div class="form-group">
@@ -64,7 +64,7 @@
                 @endforeach
                 </select>
                 @error('MARCAS_idMarca')
-                    <div class="alert alert-danger">{{ $message }}</div>
+                    <div class="alert alert-danger mt-1">{{ $message }}</div>
                 @enderror
                 </div>
 
@@ -77,7 +77,7 @@
                 @endforeach
                 </select>
                 @error('CATEGORIAS_idCategoria')
-                    <div class="alert alert-danger">{{ $message }}</div>
+                    <div class="alert alert-danger mt-1">{{ $message }}</div>
                 @enderror
                 </div>
 
@@ -85,14 +85,14 @@
                 <label for="dtlproducto">Detalle:</label>
                 <textarea name="dtlProducto" class="form-control" id="dtlProducto">{{ old('dtlProducto') }}</textarea>
                 @error('dtlProducto')
-                    <div class="alert alert-danger">{{ $message }}</div>
+                    <div class="alert alert-danger mt-1">{{ $message }}</div>
                 @enderror
                 </div>
 
                 Imagen: <br>
                 <input type="file" name="imgProducto" class="form-control">
                 @error('imgProducto')
-                    <div class="alert alert-danger">{{ $message }}</div>
+                    <div class="alert alert-danger mt-1">{{ $message }}</div>
                 @enderror
                 <br>
 

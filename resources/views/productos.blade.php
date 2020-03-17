@@ -36,7 +36,7 @@
             <article class="col-12 col-md-6 col-lg-3">
                 <a href="/detalleProducto/{{ $producto -> idProducto }}"> 
                     <div class="card" style="width: 18rem;">
-                    <img src="{{asset('img/productos/'.$producto->imgProducto)}}" class="card-img-top" alt="producto">
+                    <img src="{{asset('img/productos/'.$producto->imgProducto)}}" class="img-responsive card-img-top-" alt="producto">
                         <div class="card-body">
                             <h4 class="card-title">{{$producto->nbProducto}}</h4>
                             <p class="card-text">$ {{$producto->precioProducto}}<p>                                       
