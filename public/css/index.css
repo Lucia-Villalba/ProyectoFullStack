@@ -28,6 +28,7 @@ main section .diff{
     display: flex;
 } 
 main section .diff .outfit{
+    box-shadow: 5px 5px 5px black;
     width: 50%;
     margin: 2%;
     opacity: 1;
