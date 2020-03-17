@@ -39,7 +39,7 @@
 
 
             <div class="col-md-6">
-                <div class="bloque-producto">
+                <div class="bloque-detalle">
                     <h3>{{ $producto -> nbProducto }}</h3><hr>               
                     <div class="info-producto panel">
                         <p>{{ $producto -> dtlProducto }}</p>

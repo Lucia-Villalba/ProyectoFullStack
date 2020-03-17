@@ -1,5 +1,18 @@
-.bloque-producto{
+
+.bloque-detalle{
     background-color:#97CDCD;
     border-radius: 1em;
     padding: 1em;
+}
+
+.bloque-producto img {
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.bloque-producto img:hover {
+    max-width: 420px;
+    margin-left: 50px;
+    
 }
