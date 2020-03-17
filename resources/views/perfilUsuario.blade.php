@@ -23,6 +23,14 @@
 @section('h1', 'Perfil del Usuario')
 
 @section('main')
+
+    @if ( session("estado"))
+    <div class="alert alert-success">
+    {{ session("estado") }}
+    </div>
+    @endif
+ 
+
     <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <h4>{{ __('Datos Personales') }}</h4>

@@ -208,14 +208,14 @@ class ProductosController extends Controller
         }elseif($filtro == "Indumentaria Femenina"){
             $cat = 4;
         }
-        $listadoProductos = Producto::where('CATEGORIAS_idCategoria','=',$cat)->get();
+        $listadoProductos = Producto::where('CATEGORIAS_idCategoria','=',$cat)->orderBy('idProducto','asc')->paginate(12);
         $vac = compact('listadoProductos');
         return view('productos', $vac);
     }
 
 
     public function listadoProductos(){
-        $listadoProductos = Producto::orderBy('idProducto','asc')->paginate(4);
+        $listadoProductos = Producto::orderBy('idProducto','asc')->paginate(12);
         $vac = compact('listadoProductos');
         return view('productos', $vac);
     }

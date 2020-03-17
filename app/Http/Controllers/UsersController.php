@@ -45,6 +45,6 @@ class UsersController extends Controller
         $User->save();
 
 
-        return redirect("perfil");
+        return back()->with("estado", "Sus datos fueron modificados con éxito");
     }
 }

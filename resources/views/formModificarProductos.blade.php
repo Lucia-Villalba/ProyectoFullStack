@@ -98,23 +98,6 @@
                 @enderror
                 </div>
 
-                <div class="form-group">
-                <label for="talleProducto">Talle:</label>
-                <input type="text" name="talleProducto" value="{{ $producto -> talleProducto}}" class="form-control" id="talleProducto">
-                @error('talleProducto')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
-                </div>
-
-
-                <div class="form-group">
-                <label for="stockProducto">Stock:</label>
-                <input type="number" name="stockProducto" value="{{ $producto -> stockProducto}}" class="form-control" id="stockProducto" min="0" step="1">
-                @error('stockProducto')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
-                </div>
-
                 <div>
                 <label for="imgProducto">Imagen:</label>
                 <br>

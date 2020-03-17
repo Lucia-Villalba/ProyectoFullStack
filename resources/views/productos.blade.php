@@ -51,9 +51,9 @@
     </section>
 </div>
 
-{{$listadoProductos->links()}}
+{{ $listadoProductos->links() }}
 
-    @endsection
+@endsection
 
 @section('footer')
     @include('layouts.footer')

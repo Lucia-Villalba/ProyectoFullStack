@@ -1,3 +1,10 @@
+div.alert {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 div.card {
     max-width: 700px;
     margin: 0 auto;
