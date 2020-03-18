@@ -25,7 +25,8 @@ class UsersController extends Controller
         $reglas = [
             'name' => ['required', 'string', 'max:255'],
             'surname' => ['required', 'string', 'max:255'],
-            'fecha' => ['required', 'date'],   
+            'fecha' => ['required', 'date'],
+            "imgUser" => ['image','mimes:jpeg,png,jpg,gif,svg','max:2048']   
         ];
         $mensajes = [
             "string" => "El campo debe ser un texto",
@@ -33,11 +34,21 @@ class UsersController extends Controller
             "min" => "El campo debe tener un mínimo de :min",
             "required" => "El campo debe ser completado",
             "date " => "El campo debe ser una fecha correcta",
-            "filled" => "El campo no debe estar vacio"
+            "filled" => "El campo no debe estar vacio",
+            "imgUser.image" => "Solo puede subir un archivo de imagen con extensión jpeg, png, jpg, gif o svg",
+            "imgUser.mimes" => "Solo puede subir un archivo de imagen con extensión jpeg, png, jpg, gif o svg",
+            "imgUser.max" => "La imagen cargada puede tener hasta 2048px"
         ];
         $this->validate($request, $reglas, $mensajes);
 
         $User = User::find($idU);
+
+        if ($request->file("imgUser")){
+            $nombreArchivo = time().$request->file("imgUser")->getClientOriginalName();
+            $ruta = basename($request->file("imgUser")->move(public_path('img/avatars'), $nombreArchivo));
+            $User->imgUser = $ruta;
+
+        }
 
         $User->name = $request['name'];
         $User->surname = $request['surname'];
